@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         messageEt.setOnEditorActionListener() { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE && isValid()) {
                 setQuestion()
-                this.hideKeyBoard()
+                this.hideKeyboard()
                 true
             } else {
                 false
@@ -134,7 +134,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         if (v?.id == R.id.iv_send && isValid()) {
             setQuestion()
         }
-        this.hideKeyBoard()
+        this.hideKeyboard()
     }
 
     private fun setQuestion() {

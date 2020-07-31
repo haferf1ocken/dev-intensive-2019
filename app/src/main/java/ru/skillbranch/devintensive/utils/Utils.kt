@@ -1,5 +1,8 @@
 package ru.skillbranch.devintensive.utils
 
+import android.content.Context
+import kotlin.math.roundToInt
+
 object Utils {
 
     private val dictionary = mapOf(
@@ -71,5 +74,17 @@ object Utils {
             secondLetter == null -> "$firstLetter"
             else -> "$firstLetter$secondLetter"
         }
+    }
+
+    fun convertPxToDp(context: Context, px: Int): Int {
+        return (px / context.resources.displayMetrics.density).roundToInt()
+    }
+
+    fun convertDpToPx(context: Context, dp: Float): Int {
+        return (dp * context.resources.displayMetrics.density).roundToInt()
+    }
+
+    fun convertSpToPx(context: Context, sp: Int): Int {
+        return sp * context.resources.displayMetrics.scaledDensity.roundToInt()
     }
 }

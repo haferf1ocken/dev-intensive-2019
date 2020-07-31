@@ -6,7 +6,7 @@ import android.graphics.Rect
 import android.util.TypedValue
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_profile.*
 import java.util.zip.Inflater
 import kotlin.math.roundToInt
 

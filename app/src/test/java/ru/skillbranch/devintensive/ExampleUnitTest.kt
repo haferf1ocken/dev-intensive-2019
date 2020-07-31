@@ -119,4 +119,11 @@ class ExampleUnitTest {
             .truncate(15))
         println("A     ".truncate(3))
     }
+
+    @Test
+    fun test_split() {
+        val string = "https://www.github.com/zloysergunya/tree"
+        val pathCount = string.split(Regex("/[^/]"))
+        print(pathCount.size)
+    }
 }

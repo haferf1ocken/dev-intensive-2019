@@ -33,7 +33,6 @@ class ProfileActivity : AppCompatActivity() {
     private var userInitials: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
         initViews(savedInstanceState)

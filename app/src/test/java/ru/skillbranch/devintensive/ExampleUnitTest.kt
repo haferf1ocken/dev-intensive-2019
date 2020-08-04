@@ -5,8 +5,7 @@ import org.junit.Test
 import org.junit.Assert.*
 import ru.skillbranch.devintensive.extensions.*
 import ru.skillbranch.devintensive.models.BaseMessage
-import ru.skillbranch.devintensive.models.Chat
-import ru.skillbranch.devintensive.models.User
+import ru.skillbranch.devintensive.models.data.User
 import ru.skillbranch.devintensive.utils.Utils
 import java.util.*
 
@@ -26,21 +25,6 @@ class ExampleUnitTest {
         val user = User.makeUser("John Cena")
         val user2 = User.makeUser("John")
         println("$user\n$user2")
-    }
-
-    @Test
-    fun test_abstract_factory() {
-        val user1 = User.makeUser("Василий Иванов")
-        val user2 = user1.copy()
-        val date1 = Date()
-        val date2 = Date().add(-2, TimeUnits.HOUR)
-
-        val textMessage = BaseMessage
-            .makeMessage(user1, Chat("0"), date1, payload = "any text message",type =  "text")
-        val imageMessage = BaseMessage.makeMessage(user2, Chat("1"), date2,
-            payload = "https://anyurl.com", type = "image", isIncoming = true)
-
-        print("${textMessage.formatMessage()} \n${imageMessage.formatMessage()}")
     }
 
     @Test

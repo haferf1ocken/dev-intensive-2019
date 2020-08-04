@@ -1,7 +1,7 @@
 package ru.skillbranch.devintensive.extensions
 
 import ru.skillbranch.devintensive.models.data.User
-import ru.skillbranch.devintensive.models.UserView
+import ru.skillbranch.devintensive.utils.UserView
 import ru.skillbranch.devintensive.utils.Utils
 
 fun User.toUserView() : UserView {
@@ -14,11 +14,12 @@ fun User.toUserView() : UserView {
         else -> "Последний раз был ${lastVisit.humanizeDiff()}"
     }
 
-    return UserView (
+    return UserView(
         id,
         fullName = "$firstName $lastName",
         nickName = nickName,
         initials = initials,
         avatar = avatar,
-        status = status)
+        status = status
+    )
 }

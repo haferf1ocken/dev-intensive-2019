@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_archive.*
 import ru.skillbranch.devintensive.R
-import ru.skillbranch.devintensive.ui.adapters.ArchiveItemTouchHelperCallback
+import ru.skillbranch.devintensive.utils.ArchiveItemTouchHelperCallback
 import ru.skillbranch.devintensive.ui.adapters.ChatAdapter
 import ru.skillbranch.devintensive.viewmodels.ArchiveViewModel
 
@@ -47,7 +47,10 @@ class ArchiveActivity : AppCompatActivity() {
 
         val divider = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
 
-        val touchCallback = ArchiveItemTouchHelperCallback(chatAdapter) {
+        val touchCallback =
+            ArchiveItemTouchHelperCallback(
+                chatAdapter
+            ) {
                 viewModel.restoreFromArchive(it.id)
             }
 

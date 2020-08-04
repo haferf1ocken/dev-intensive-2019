@@ -4,7 +4,7 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
 import ru.skillbranch.devintensive.App
-import ru.skillbranch.devintensive.models.Profile
+import ru.skillbranch.devintensive.utils.Profile
 
 object PreferencesRepository {
 
@@ -38,14 +38,15 @@ object PreferencesRepository {
         }
     }
 
-    fun getProfile(): Profile = Profile(
-        prefs.getInt(RATING, 0),
-        prefs.getInt(RESPECT, 0),
-        prefs.getString(FIRST_NAME, "")!!,
-        prefs.getString(LAST_NAME, "")!!,
-        prefs.getString(ABOUT, "")!!,
-        prefs.getString(REPOSITORY, "")!!
-    )
+    fun getProfile(): Profile =
+        Profile(
+            prefs.getInt(RATING, 0),
+            prefs.getInt(RESPECT, 0),
+            prefs.getString(FIRST_NAME, "")!!,
+            prefs.getString(LAST_NAME, "")!!,
+            prefs.getString(ABOUT, "")!!,
+            prefs.getString(REPOSITORY, "")!!
+        )
 
     private fun putValue(pair: Pair<String, Any>) = with(prefs.edit()) {
         val key = pair.first

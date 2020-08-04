@@ -19,7 +19,7 @@ import androidx.core.graphics.drawable.toBitmap
 import androidx.core.graphics.toRectF
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import ru.skillbranch.devintensive.R
-import ru.skillbranch.devintensive.extensions.dpToPx
+import ru.skillbranch.devintensive.utils.dpToPx
 import kotlin.math.max
 
 class AvatarImageView @JvmOverloads constructor(
